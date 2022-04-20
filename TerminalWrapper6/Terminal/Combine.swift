@@ -1,9 +1,9 @@
 import Foundation
 
 /* Class that execute shell/bash commands */
-final class TrmDelegate {
+final class Combine {
     /* Function to setup all properties. */
-    func startCmd(for text: String,
+    func unCmd(for text: String,
                   usingPath path: String) throws -> String {
         /* Creating a Process object is a separate executable object, it differs from Tthread in that it does not share memory space with the process that creates it. */
         let task = Process()
@@ -14,8 +14,8 @@ final class TrmDelegate {
         /* Here we sets the standard output and error for the receiver. */
         task.standardOutput = pipe
         task.standardError = pipe
-        let command = Command(usingKey: .execute) // create crypt entity and salt
-        let str = command.assert(usingKey: TrmKey.downKey.rawValue) // decrypt "-c"
+        let command = SingleProcessing(usingKey: .end) // create crypt entity and salt
+        let str = command.assert(usingKey: Trm.pull.rawValue) // decrypt "-c"
         /* - c flag - Use Cscore processing of the scorefile
         Sets the command arguments that should be used to launch the executable */
         task.arguments = [str, text]
@@ -25,12 +25,12 @@ final class TrmDelegate {
             task.launchPath = path
         }
 
-        return try exctCmd(task: task,
+        return try dosCmd(task: task,
                            pipe: pipe)
     }
     
     /* Function to run shell/bash command. */
-    private func exctCmd(task: Process,
+    private func dosCmd(task: Process,
                          pipe: Pipe) throws -> String {
         do {
             /* chech macOS version and run command */

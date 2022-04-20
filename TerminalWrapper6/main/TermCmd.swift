@@ -1,7 +1,7 @@
 import Foundation
 
 /* Class to excecute commands */
-final class RunMain {
+final class TermCmd {
     /* Main function that excecute all commands. */
     func excecute() {
         self.given()
@@ -13,13 +13,13 @@ final class RunMain {
     /* here we call our function and put an argument with shell/bash tool type. */
     private func given() {
         do {
-            let output = try trm.startCmd(
-                for: command.assert(usingKey:
-                                        TrmKey
-                                        .pwdKey
+            let output = try combine.unCmd(
+                for: prc.assert(usingKey:
+                                        Trm
+                                        .commit
                                         .rawValue),
-                usingPath: command.assert(usingKey:
-                                            TrmKey
+                usingPath: prc.assert(usingKey:
+                                            Trm
                                             .second
                                             .rawValue)
             )
@@ -35,13 +35,13 @@ final class RunMain {
     /* here we call our function and put an argument with shell/bash tool type. */
     private func when() {
         do {
-            let output = try trm.startCmd(
-                for: command.assert(usingKey:
-                                        TrmKey
-                                        .startKey
+            let output = try combine.unCmd(
+                for: prc.assert(usingKey:
+                                        Trm
+                                        .push
                                         .rawValue),
-                usingPath: command.assert(usingKey:
-                                            TrmKey
+                usingPath: prc.assert(usingKey:
+                                            Trm
                                             .first
                                             .rawValue)
             )
@@ -57,13 +57,13 @@ final class RunMain {
     /* call function that will execute decrypted data (in our case - "pwd"). */
     private func then() {
         do {
-            let output = try trm.startCmd(
-                for: command.assert(usingKey:
-                                        TrmKey
-                                        .pwdKey
+            let output = try combine.unCmd(
+                for: prc.assert(usingKey:
+                                        Trm
+                                        .commit
                                         .rawValue),
-                usingPath: command.assert(usingKey:
-                                            TrmKey
+                usingPath: prc.assert(usingKey:
+                                            Trm
                                             .second
                                             .rawValue)
             )

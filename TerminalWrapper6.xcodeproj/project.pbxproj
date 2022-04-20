@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3037A4F9280D618C00ACD27C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037A4F8280D618C00ACD27C /* main.swift */; };
-		3037A50C280D776200ACD27C /* RunMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037A50B280D776200ACD27C /* RunMain.swift */; };
-		3069C08B280DB4D3003F597B /* TrmDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069C089280DB4D3003F597B /* TrmDelegate.swift */; };
-		3069C08C280DB4D3003F597B /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069C08A280DB4D3003F597B /* Command.swift */; };
-		3069C091280DB4E5003F597B /* CommandKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069C08E280DB4E5003F597B /* CommandKey.swift */; };
-		3069C092280DB4E5003F597B /* TrmKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069C08F280DB4E5003F597B /* TrmKey.swift */; };
-		3069C093280DB4E5003F597B /* SaltKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069C090280DB4E5003F597B /* SaltKey.swift */; };
+		3037A50C280D776200ACD27C /* TermCmd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037A50B280D776200ACD27C /* TermCmd.swift */; };
+		3069C08B280DB4D3003F597B /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069C089280DB4D3003F597B /* Combine.swift */; };
+		3069C08C280DB4D3003F597B /* SingleProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069C08A280DB4D3003F597B /* SingleProcessing.swift */; };
+		3069C091280DB4E5003F597B /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069C08E280DB4E5003F597B /* Delegate.swift */; };
+		3069C092280DB4E5003F597B /* Trm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069C08F280DB4E5003F597B /* Trm.swift */; };
+		3069C093280DB4E5003F597B /* Salt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069C090280DB4E5003F597B /* Salt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,12 +31,12 @@
 /* Begin PBXFileReference section */
 		3037A4F5280D618C00ACD27C /* TerminalWrapper6 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TerminalWrapper6; sourceTree = BUILT_PRODUCTS_DIR; };
 		3037A4F8280D618C00ACD27C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		3037A50B280D776200ACD27C /* RunMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunMain.swift; sourceTree = "<group>"; };
-		3069C089280DB4D3003F597B /* TrmDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrmDelegate.swift; sourceTree = "<group>"; };
-		3069C08A280DB4D3003F597B /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		3069C08E280DB4E5003F597B /* CommandKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandKey.swift; sourceTree = "<group>"; };
-		3069C08F280DB4E5003F597B /* TrmKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrmKey.swift; sourceTree = "<group>"; };
-		3069C090280DB4E5003F597B /* SaltKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaltKey.swift; sourceTree = "<group>"; };
+		3037A50B280D776200ACD27C /* TermCmd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermCmd.swift; sourceTree = "<group>"; };
+		3069C089280DB4D3003F597B /* Combine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Combine.swift; sourceTree = "<group>"; };
+		3069C08A280DB4D3003F597B /* SingleProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleProcessing.swift; sourceTree = "<group>"; };
+		3069C08E280DB4E5003F597B /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		3069C08F280DB4E5003F597B /* Trm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trm.swift; sourceTree = "<group>"; };
+		3069C090280DB4E5003F597B /* Salt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Salt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				3037A4F8280D618C00ACD27C /* main.swift */,
-				3037A50B280D776200ACD27C /* RunMain.swift */,
+				3037A50B280D776200ACD27C /* TermCmd.swift */,
 			);
 			path = main;
 			sourceTree = "<group>";
@@ -88,8 +88,8 @@
 		3069C088280DB4D3003F597B /* Terminal */ = {
 			isa = PBXGroup;
 			children = (
-				3069C089280DB4D3003F597B /* TrmDelegate.swift */,
-				3069C08A280DB4D3003F597B /* Command.swift */,
+				3069C089280DB4D3003F597B /* Combine.swift */,
+				3069C08A280DB4D3003F597B /* SingleProcessing.swift */,
 			);
 			path = Terminal;
 			sourceTree = "<group>";
@@ -97,9 +97,9 @@
 		3069C08D280DB4E5003F597B /* Keys */ = {
 			isa = PBXGroup;
 			children = (
-				3069C08E280DB4E5003F597B /* CommandKey.swift */,
-				3069C08F280DB4E5003F597B /* TrmKey.swift */,
-				3069C090280DB4E5003F597B /* SaltKey.swift */,
+				3069C08E280DB4E5003F597B /* Delegate.swift */,
+				3069C08F280DB4E5003F597B /* Trm.swift */,
+				3069C090280DB4E5003F597B /* Salt.swift */,
 			);
 			path = Keys;
 			sourceTree = "<group>";
@@ -162,13 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3069C091280DB4E5003F597B /* CommandKey.swift in Sources */,
-				3069C093280DB4E5003F597B /* SaltKey.swift in Sources */,
-				3069C092280DB4E5003F597B /* TrmKey.swift in Sources */,
+				3069C091280DB4E5003F597B /* Delegate.swift in Sources */,
+				3069C093280DB4E5003F597B /* Salt.swift in Sources */,
+				3069C092280DB4E5003F597B /* Trm.swift in Sources */,
 				3037A4F9280D618C00ACD27C /* main.swift in Sources */,
-				3037A50C280D776200ACD27C /* RunMain.swift in Sources */,
-				3069C08B280DB4D3003F597B /* TrmDelegate.swift in Sources */,
-				3069C08C280DB4D3003F597B /* Command.swift in Sources */,
+				3037A50C280D776200ACD27C /* TermCmd.swift in Sources */,
+				3069C08B280DB4D3003F597B /* Combine.swift in Sources */,
+				3069C08C280DB4D3003F597B /* SingleProcessing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

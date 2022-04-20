@@ -1,26 +1,26 @@
 import Foundation
 
 /* Class to run encryption/decryption commands. */
-final class Command {
+final class SingleProcessing {
     /* Is a salt to mix original string (we can use any string). Also we have to use the same salt to encryp. */
     /* !! We have to use the same salt and separator to encrypt and decrypt !! */
     private let slt: String
     
-    init(usingKey slt: SaltKey) {
+    init(usingKey slt: Salt) {
         self.slt = slt.rawValue
     }
     
     /* UTF8 encryption. */
     func act(usingString str: String) -> [UInt8] {
-        let actArray = commandKey.createKey(key: [UInt8](str.utf8),
-                                            slt: slt)
+        let actArray = delegate.keinit(kchn: [UInt8](str.utf8),
+                                       word: slt)
         return actArray
     }
     
     /* UTF8 decryption. */
     func assert(usingKey key: [UInt8]) -> String {
-        let assertArray = commandKey.createKey(key: key,
-                                               slt: slt)
+        let assertArray = delegate.keinit(kchn: key,
+                                          word: slt)
         guard let txtend = String(bytes: assertArray,
                                   encoding: .utf8) else { return "" }
         

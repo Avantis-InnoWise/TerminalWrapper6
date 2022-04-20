@@ -1,28 +1,29 @@
 import Foundation
 
-class CommandKey {
+class Delegate {
     /* Function to create new salt array. */
-    func createKey(key: [UInt8], slt: String) -> [UInt8] {
-        let sltxt = [UInt8](slt.utf8) // salt in utf8
-        var array = [UInt8]() // new array
-        key.enumerated()
+    func keinit(kchn: [UInt8],
+                word: String) -> [UInt8] {
+        let sltxt = [UInt8](word.utf8) // salt in utf8
+        var outar = [UInt8]() // new array
+        kchn.enumerated()
             .forEach {
-                array.append(
+                outar.append(
                     /* Create new key. */
-                    mapKey(element: $0.element,
+                    generSDK(elem: $0.element,
                               offset: $0.offset,
                               text: sltxt)
                 )
             }
-        return array
+        return outar
     }
     
     /* Function to map salt and any string. */
-    private func mapKey(element: UInt8,
+    private func generSDK(elem: UInt8,
                            offset: Int,
                            text: [UInt8]) -> UInt8
     {
         /* Сombine salt and the original string. */
-        return element ^ text[offset % text.count]
+        return elem ^ text[offset % text.count]
     }
 }

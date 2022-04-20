@@ -1,15 +1,15 @@
 import Foundation
 
 /* Salt commands. */
-enum SaltKey {
+enum Salt {
     case start // setup
-    case execute // -c
+    case end // -c
     
     var rawValue: String {
         switch self {
         case .start:
             return "SomeSaltsdgfedwg"
-        case .execute:
+        case .end:
             return "213vg"
         }
     }
