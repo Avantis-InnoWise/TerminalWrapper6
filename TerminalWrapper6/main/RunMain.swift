@@ -67,7 +67,7 @@ final class RunMain {
                                             .second
                                             .rawValue)
             )
-            /* print data to application console. */
+            /* output data to application console. */
             print(output)
         } catch {
             /* handle errors (may be runtime or etc). */
